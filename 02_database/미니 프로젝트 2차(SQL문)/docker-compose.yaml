@@ -1,0 +1,16 @@
+# 생활체육 회원관리 실습용 PostgreSQL
+name: shop
+
+services:
+  db:
+    container_name: shop-db
+    image: postgres:18
+    environment:
+      POSTGRES_PASSWORD: admin1234
+    ports:
+      - "5432:5433"
+    volumes:
+      - pgdata:/var/lib/postgresql
+
+volumes:
+  pgdata:
